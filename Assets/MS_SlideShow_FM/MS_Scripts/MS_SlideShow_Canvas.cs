@@ -56,7 +56,7 @@ public class MS_SlideShow_Canvas : MonoBehaviour
 
     void Page_Switch()
     {
-        if ((currentPageIndex < pages.Count - 1) && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.RightArrow)))
+        if ((currentPageIndex < pages.Count - 1) && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.RightArrow)) && !Mkadmi_PP_Manager.isPlayerPickerDisplayed)
         {
             currentPage.Set_Active(false);
             currentPageIndex++;
@@ -64,7 +64,7 @@ public class MS_SlideShow_Canvas : MonoBehaviour
             currentPage.Set_Active(true);
         }
         
-        if ((currentPageIndex > 0) && (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.LeftArrow)))
+        if ((currentPageIndex > 0) && (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.LeftArrow)) && !Mkadmi_PP_Manager.isPlayerPickerDisplayed)
         {
             currentPage.Set_Active(false);
             currentPageIndex--;

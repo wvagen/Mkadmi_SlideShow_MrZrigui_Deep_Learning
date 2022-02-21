@@ -13,6 +13,9 @@ public class Mkadmi_PP_Constants
 
 public class Mkadmi_PP_Manager : MonoBehaviour
 {
+
+    public static bool isPlayerPickerDisplayed = false;
+
     public Animator myAnim;
 
     public InputField newPlayerNameInput;
@@ -42,6 +45,7 @@ public class Mkadmi_PP_Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             myAnim.SetBool(Mkadmi_PP_Constants.PP_ANIM_DISPLAY_BOOL_NAME, !myAnim.GetBool(Mkadmi_PP_Constants.PP_ANIM_DISPLAY_BOOL_NAME));
+            isPlayerPickerDisplayed = !isPlayerPickerDisplayed;
         }
     }
 
