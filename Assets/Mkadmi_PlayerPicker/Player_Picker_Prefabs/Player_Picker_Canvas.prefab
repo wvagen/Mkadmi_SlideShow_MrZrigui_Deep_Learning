@@ -798,6 +798,9 @@ MonoBehaviour:
   newPlayerNameInput: {fileID: 7660277181202336041}
   player: {fileID: 6667175668997891132, guid: 195183811a7ca47a38747912991b372c, type: 3}
   playersListContainer: {fileID: 7660277181735140556}
+  playerSelectedPanelImg: {fileID: 535335557719334193}
+  nonePlayerSelectedSprite: {fileID: 21300000, guid: 997ac216ed59c4b10a97280c63cf5f9c, type: 3}
+  selectedPlayerSprite: {fileID: 21300000, guid: 9107d96184f17498b9e0058c1b9fc98a, type: 3}
   playersListPanel: {fileID: 7660277182565689682}
   addPlayersPanel: {fileID: 7660277180613454321}
   playerPickerPanel: {fileID: 7660277182365169387}
@@ -2397,7 +2400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7660277182365169384
 RectTransform:
   m_ObjectHideFlags: 0

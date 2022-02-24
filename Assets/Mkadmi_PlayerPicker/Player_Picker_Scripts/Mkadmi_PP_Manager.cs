@@ -23,6 +23,9 @@ public class Mkadmi_PP_Manager : MonoBehaviour
     public GameObject player;
     public Transform playersListContainer;
 
+    public Image playerSelectedPanelImg;
+    public Sprite nonePlayerSelectedSprite, selectedPlayerSprite;
+
     public GameObject playersListPanel, addPlayersPanel, playerPickerPanel;
 
     public Text randomChosenPlayertxt;
@@ -116,6 +119,7 @@ public class Mkadmi_PP_Manager : MonoBehaviour
 
     public void Roll_Names()
     {
+        playerSelectedPanelImg.sprite = nonePlayerSelectedSprite;
         if (randomSelectionCoroutine != null) StopCoroutine(randomSelectionCoroutine);
 
         randomSelectionCoroutine = StartCoroutine(Select_Random_Player());
@@ -136,6 +140,8 @@ public class Mkadmi_PP_Manager : MonoBehaviour
         }
 
         randomChosenPlayertxt.text = playersList[randomPlayer].playerName.text;
+        playerSelectedPanelImg.sprite = selectedPlayerSprite;
+
     }
 
     void Empty_Players_List()
